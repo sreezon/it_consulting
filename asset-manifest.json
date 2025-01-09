@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/it_consulting/static/css/main.4d3f782e.css",
+    "main.js": "/it_consulting/static/js/main.7fc5f712.js",
+    "index.html": "/it_consulting/index.html",
+    "main.4d3f782e.css.map": "/it_consulting/static/css/main.4d3f782e.css.map",
+    "main.7fc5f712.js.map": "/it_consulting/static/js/main.7fc5f712.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4d3f782e.css",
+    "static/js/main.7fc5f712.js"
+  ]
+}
