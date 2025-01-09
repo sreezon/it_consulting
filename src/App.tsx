@@ -1,5 +1,22 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { Monitor, Server, Shield, Users, MessageSquare, ArrowRight } from 'lucide-react';
+
+interface ServiceCardProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+interface FeatureProps {
+  icon: ReactNode;
+  title: string;
+  description: string;
+}
+
+interface StatProps {
+  number: string;
+  label: string;
+}
 
 const Website = () => {
   return (
@@ -163,7 +180,7 @@ const Website = () => {
 };
 
 // Component for service cards
-const ServiceCard = ({ icon, title, description }) => (
+const ServiceCard: React.FC<ServiceCardProps> = ({ icon, title, description }) => (
   <div className="p-6 bg-white rounded-lg shadow-lg text-center">
     <div className="flex justify-center mb-4">{icon}</div>
     <h3 className="text-xl font-bold mb-2">{title}</h3>
@@ -175,7 +192,7 @@ const ServiceCard = ({ icon, title, description }) => (
 );
 
 // Component for features
-const Feature = ({ icon, title, description }) => (
+const Feature: React.FC<FeatureProps> = ({ icon, title, description }) => (
   <div className="flex items-start space-x-4">
     <div className="flex-shrink-0">{icon}</div>
     <div>
@@ -186,7 +203,7 @@ const Feature = ({ icon, title, description }) => (
 );
 
 // Component for statistics
-const Stat = ({ number, label }) => (
+const Stat: React.FC<StatProps> = ({ number, label }) => (
   <div className="text-center">
     <div className="text-3xl font-bold text-blue-600 mb-1">{number}</div>
     <div className="text-gray-600">{label}</div>
